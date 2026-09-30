@@ -680,7 +680,7 @@ class ParqueosScreen(Screen):
         main_layout.add_widget(search_layout)
 
         main_layout.add_widget(Label(
-            text='Parqueos más buscados',
+            text='Parqueos disponibles',
             size_hint_y=None, height=30, font_size=16, color=(0, 0, 0, 1)
         ))
 
