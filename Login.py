@@ -646,7 +646,7 @@ class ParkingCard(BoxLayout):
         self.parking_info = {'name': name, 'hours': hours, 'image': image_path}
 
         with self.canvas.before:
-            Color(1, 0.90, 0.55, 1)  # amarillo
+            Color(1, 0.90, 0.55, 1fi)  # amarillo
             self.rect = RoundedRectangle(radius=[15])
         self.bind(pos=self.update_rect, size=self.update_rect)
 
@@ -683,7 +683,7 @@ class ParqueosScreen(Screen):
         #Barra de busqueda
         search_layout = BoxLayout(size_hint_y=None, height=50, padding=10, spacing=10)
         search_box = TextInput(
-            hint_text='¡Busca tu parqueo cerca de ti',
+            hint_text='¡Escribe el nombre del parqueo que buscas!',
             size_hint=(1, 1),
             multiline=False,
             background_normal='',
