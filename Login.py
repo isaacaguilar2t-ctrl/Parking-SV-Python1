@@ -646,7 +646,7 @@ class ParkingCard(BoxLayout):
         self.parking_info = {'name': name, 'hours': hours, 'image': image_path}
 
         with self.canvas.before:
-            Color(1, 0.83, 0, 1)  # amarillo
+            Color(1, 0.90, 0.55, 1)  # amarillo
             self.rect = RoundedRectangle(radius=[15])
         self.bind(pos=self.update_rect, size=self.update_rect)
 
