@@ -683,7 +683,7 @@ class ParqueosScreen(Screen):
         #Barra de busqueda
         search_layout = BoxLayout(size_hint_y=None, height=50, padding=10, spacing=10)
         search_box = TextInput(
-            hint_text='¡Busca tu parqueo cerca de ti',
+            hint_text='¡Escribe el nombre del parqueo que buscas!',
             size_hint=(1, 1),
             multiline=False,
             background_normal='',
