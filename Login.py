@@ -120,6 +120,15 @@ class LoginScreen(Screen):
             cursor_color=textColor1
         )
 
+        btn_mostrar = Button(
+            text="👁 Mostrar contraseña",
+            size_hint=(1, None),
+            height=40,
+            color=textColor1
+        )
+
+        btn_mostrar.bind(on_press=self.mostrar_contrasena)
+        self.layout.add_widget(btn_mostrar)
         self.layout.add_widget(self.usuario)
         self.layout.add_widget(self.clave)
 
@@ -156,6 +165,13 @@ class LoginScreen(Screen):
         self.layout.add_widget(btn_volver)
 
         self.add_widget(self.layout)
+
+    def mostrar_contrasena(self, instance):
+        self.clave.password = not self.clave.password
+        if self.clave.password:
+            instance.text = "👁 Mostrar contraseña"
+        else:   
+            instance.text = "🙈 Ocultar contraseña"
 
     def ir_a_register(self, instance):
         self.manager.transition.direction = 'left'
